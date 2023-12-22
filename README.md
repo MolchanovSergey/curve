@@ -189,28 +189,28 @@ G-кривая – один из главных индикаторов сост�
 - pip install nelson_siegel_svensson
 - import numpy as np
 - import pandas as pd
-from matplotlib.pyplot import plot
-import matplotlib.pyplot as plt
-from sklearn.metrics import mean_squared_error
-from nelson_siegel_svensson.calibrate import calibrate_ns_ols
-from nelson_siegel_svensson import NelsonSiegelCurve
+- from matplotlib.pyplot import plot
+- import matplotlib.pyplot as plt
+- from sklearn.metrics import mean_squared_error
+- from nelson_siegel_svensson.calibrate import calibrate_ns_ols
+- from nelson_siegel_svensson import NelsonSiegelCurve
 
-"Подготовка данных"
-df = pd.read_csv('DataCurve.csv')
-term = df['Term'].astype (float)
-yieldRZD = df['Yield'].astype (float)
-df = df.sort_values(by=['Term'])
-term = np.array(df['Term'])
-yieldRZD = np.array(df['Yield'])
+- "Подготовка данных"
+- df = pd.read_csv('DataCurve.csv')
+- term = df['Term'].astype (float)
+- yieldRZD = df['Yield'].astype (float)
+- df = df.sort_values(by=['Term'])
+- term = np.array(df['Term'])
+- yieldRZD = np.array(df['Yield'])
 
-"Расчёт параметров модели и построения кривой"
-curve, status = calibrate_ns_ols(term, yieldRZD, tau0=1.0)
-assert status.success
-y = curve
-t = np.linspace(0, 26, 2000)
-print (curve)
-plot(t, y(t), yieldRZD)
-mean_squared_error(yieldRZD, y(term))
+- "Расчёт параметров модели и построения кривой"
+- curve, status = calibrate_ns_ols(term, yieldRZD, tau0=1.0)
+- assert status.success
+- y = curve
+- t = np.linspace(0, 26, 2000)
+- print (curve)
+- plot(t, y(t), yieldRZD)
+- mean_squared_error(yieldRZD, y(term))
 
 # Обзор литературы
 
