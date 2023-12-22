@@ -184,10 +184,11 @@ G-кривая – один из главных индикаторов сост�
 
 
 Ниже приведён весь код расчёта параметров модели и построения кривой:
-"Настройка пространства"
-pip install nelson_siegel_svensson
-import numpy as np
-import pandas as pd
+
+- "Настройка пространства"
+- pip install nelson_siegel_svensson
+- import numpy as np
+- import pandas as pd
 from matplotlib.pyplot import plot
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error
