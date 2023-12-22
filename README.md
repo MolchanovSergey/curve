@@ -194,7 +194,6 @@ G-кривая – один из главных индикаторов сост�
 - from sklearn.metrics import mean_squared_error
 - from nelson_siegel_svensson.calibrate import calibrate_ns_ols
 - from nelson_siegel_svensson import NelsonSiegelCurve
-
 - "Подготовка данных"
 - df = pd.read_csv('DataCurve.csv')
 - term = df['Term'].astype (float)
@@ -202,7 +201,6 @@ G-кривая – один из главных индикаторов сост�
 - df = df.sort_values(by=['Term'])
 - term = np.array(df['Term'])
 - yieldRZD = np.array(df['Yield'])
-
 - "Расчёт параметров модели и построения кривой"
 - curve, status = calibrate_ns_ols(term, yieldRZD, tau0=1.0)
 - assert status.success
