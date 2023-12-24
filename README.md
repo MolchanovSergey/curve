@@ -1,6 +1,3 @@
-![image](https://github.com/MolchanovSergey/curve/assets/147549211/50719cdf-3b52-4e82-9413-c9c241921c8e)# curve
-
-
 ## Моделирование кривой процентных ставок и сравнение подходов
 
 # План по проекту 
